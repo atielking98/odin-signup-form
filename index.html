@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="style.css">
     <title>Signup Form</title>
 </head>
+<script>
+    var check = function() {
+        if (document.getElementById('pwd').value ==
+            document.getElementById('confirm-password').value) {
+            document.getElementById('message').style.color = 'white';
+            document.getElementById('message').innerHTML = 'passwords match ✅';
+        } else {
+            document.getElementById('message').style.color = 'white';
+            document.getElementById('message').innerHTML = 'passwords do not match ❌';
+        }
+    }
+</script>
 <body>
     <div class="landing-page">
         <div class="sidebar">
@@ -33,39 +45,39 @@
                     <label for="fname">
                         <span>First Name</span>
                     </label>
-                    <input type="text" id="fname" name="fname" />
+                    <input type="text" id="fname" name="fname" required/>
                 </div>
                 <div class="input">
                     <label for="lname">
                         <span>Last Name</span>
                         </label>
-                        <input type="text" id="lname" name="lname" />
+                        <input type="text" id="lname" name="lname" required/>
                 </div>
                 <div class="input">
                     <label for="email">
                     <span>Email</span>
                     </label>
-                    <input type="email" id="email" name="email" />
+                    <input type="email" id="email" name="email" required />
                 </div>
                 <div class="input">
                     <label for="tel">
                     <span>Phone Number </span>
                     </label>
-                    <input type="tel" id="tel" name="tel" />
+                    <input type="tel" id="tel" name="tel" minlength="10" maxlength="10" required/>
                 </div>
                 <div class="input">
                     <label for="pwd">
                         <span>Password</span>
                       </label>
-                      <input type="password" id="pwd" name="password" />
+                      <input type="password" id="pwd" name="password" onkeyup="check();" required/>
                 </div>
                 <div class="input">
-                      <label for="pwd">
+                      <label for="confirm-password">
                         <span>Confirm Password</span>
                       </label>
-                      <input type="password" id="pwd" name="password" />
-
+                      <input type="password" id="confirm-password" name="confirm-password" onkeyup="check();" required/>
                 </div>
+                <div class="input" id='message'></div>
                 </div>
                 <button class="button" type="submit">Create Account</button>
             </form>
