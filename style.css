@@ -1,0 +1,89 @@
+.landing-page {
+    display: flex;
+}
+
+label, input {
+    display: block;
+}
+
+.input {
+    width: 44%;
+}
+
+.sidebar {
+    background-image: url("assets/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    flex: 0.4;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(237, 231, 225, 0.5);
+    font-size: 48px;
+    color: white;
+}
+
+.form-wrapper {
+    margin: 32px;
+    display: flex;
+    flex: 0.6;
+    flex: column;
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+
+.form {
+    display: flex;
+    flex: column;
+    flex-wrap: wrap;
+    background-color: rgba(90,80, 58, 0.8);
+    padding: 32px;
+    color: white;
+}
+
+.form-title {
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex: column;
+    flex-wrap: wrap;
+}
+
+
+.logo img {
+    height: 100px;
+}
+
+.credits {
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    color: white;
+}
+
+.credits a {
+    color: white;
+}
+
+.form-wrapper a, .form-intro {
+    color: rgb(171, 107, 54);
+}
+
+.form-intro {
+    font-size: 32px;
+}
+
+.button {
+    border: 2px solid var(--color);
+    padding: 10px 40px;
+    margin: 40px 0;
+}
